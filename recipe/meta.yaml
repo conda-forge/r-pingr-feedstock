@@ -1,4 +1,4 @@
-{% set version = '1.2.0' %}
+{% set version = "2.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/pingr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pingr/pingr_{{ version }}.tar.gz
-  sha256: f079c866c80232d5b56fd19e3fbfe6128cc89f5d9f39ef5439ca3cd63371c750
+  sha256: 677dce49ba8a4022c9f24d5334a14c0ddb7c3108abac5cc3fd1eeb4921aadf3b
 
 build:
   merge_build_host: True  # [win]
