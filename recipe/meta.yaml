@@ -1,4 +1,4 @@
-{% set version = '1.2.0' %}
+{% set version = '2.0.0' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/pingr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pingr/pingr_{{ version }}.tar.gz
-  sha256: f079c866c80232d5b56fd19e3fbfe6128cc89f5d9f39ef5439ca3cd63371c750
+  sha256: 677dce49ba8a4022c9f24d5334a14c0ddb7c3108abac5cc3fd1eeb4921aadf3b
 
 build:
   merge_build_host: True  # [win]
@@ -47,7 +47,9 @@ about:
   summary: Check if a remote computer is up. It can either just call the system ping command,
     or check a specified TCP port.
   license_family: MIT
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - LICENSE
 
 extra:
   recipe-maintainers:
@@ -55,7 +57,7 @@ extra:
 
 # Package: pingr
 # Title: Check if a Remote Computer is Up
-# Version: 1.2.0
+# Version: 2.0.0
 # Authors@R: person(given = "Gabor", family = "Csardi", role = c("aut", "cre"), email = "csardi.gabor@gmail.com")
 # Description: Check if a remote computer is up. It can either just call the system ping command, or check a specified TCP port.
 # License: MIT + file LICENSE
@@ -63,12 +65,12 @@ extra:
 # URL: https://github.com/r-lib/pingr#readme
 # BugReports: https://github.com/r-lib/pingr/issues
 # Suggests: covr, testthat
-# Imports: processx
+# Imports: processx, utils
 # RoxygenNote: 6.1.99.9001
 # Encoding: UTF-8
 # NeedsCompilation: yes
-# Packaged: 2019-10-09 12:08:51 UTC; gaborcsardi
+# Packaged: 2019-10-21 14:15:34 UTC; gaborcsardi
 # Author: Gabor Csardi [aut, cre]
 # Maintainer: Gabor Csardi <csardi.gabor@gmail.com>
 # Repository: CRAN
-# Date/Publication: 2019-10-09 13:50:02 UTC
+# Date/Publication: 2019-10-21 16:20:02 UTC
