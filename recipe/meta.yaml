@@ -1,4 +1,4 @@
-{% set version = "2.0.3" %}
+{% set version = "2.0.4" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/pingr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pingr/pingr_{{ version }}.tar.gz
-  sha256: 3c29c0be588c3fee267a2c0f60faa08e37682ba001db6c0249b065abc6aed863
+  sha256: 54a43c2be3e3fd009f4960781619f7f9f5a4c905222504821241cfc595ea0773
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
